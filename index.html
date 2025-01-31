@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Promotion Partner">
+    <meta name="keywords" content=" Global, Promotion, Partner, Opportunity">
+    <meta name="author" content="Workbench">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Global Promotion Partner">
+    <meta name="twitter:description" content="Global Promotion Partner">
+    <meta name="twitter:url" content="https://rankingoptimization.net">
+    <meta name="twitter:image" content="https://amazonadc.github.io/us/azonad.png">
+    <meta name="twitter:image:alt" content="Global Promotion Partner">
+
+    <link rel="icon" type="image/x-icon" href="https://amazonadc.github.io/us/DataRevolt.ico"> 
+
+    <title>Data Revolt</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        .text-container {
+            z-index: 100;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            opacity: 0.8;
+            user-select: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeOut 1.5s forwards 1.5s;
+        }
+
+        .loading-circle {
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 0.8; }
+            100% { opacity: 0; }
+        }
+
+        .iphone-frame-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            max-width: 90vw;
+            max-height: 90vh;
+            padding: 10px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .iphone-frame {
+            width: 390px;
+            height: 844px;
+            border: 16px solid black;
+            border-radius: 36px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .iphone-screen {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .iphone-screen iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+
+        :root {
+            --color-bg1: #000000;
+            --color-bg2: #2A2A2A;
+            --color1: 178, 41, 41;
+            --color2: 160, 50, 50;
+            --color3: 210, 80, 80;
+            --color4: 130, 60, 60;
+            --color5: 190, 50, 50;
+            --color-interactive: 255, 100, 100;
+            --circle-size: 80%;
+            --blending: hard-light;
+        }
+
+        @keyframes moveInCircle {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes moveVertical {
+            0% {
+                transform: translateY(-50%);
+            }
+            50% {
+                transform: translateY(50%);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        @keyframes moveHorizontal {
+            0% {
+                transform: translateX(-50%) translateY(-10%);
+            }
+            50% {
+                transform: translateX(50%) translateY(10%);
+            }
+            100% {
+                transform: translateX(-50%) translateY(-10%);
+            }
+        }
+
+        .gradient-bg {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+            z-index: 1;
+        }
+
+        .gradient-bg svg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .gradients-container {
+            filter: url(#goo) blur(40px);
+            width: 100%;
+            height: 100%;
+        }
+
+        .g1 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2);
+            left: calc(50% - var(--circle-size) / 2);
+            transform-origin: center center;
+            animation: moveVertical 30s ease infinite;
+            opacity: 1;
+        }
+
+        .g2 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2);
+            left: calc(50% - var(--circle-size) / 2);
+            transform-origin: calc(50% - 400px);
+            animation: moveInCircle 20s reverse infinite;
+            opacity: 1;
+        }
+
+        .g3 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2 + 200px);
+            left: calc(50% - var(--circle-size) / 2 - 500px);
+            transform-origin: calc(50% + 400px);
+            animation: moveInCircle 40s linear infinite;
+            opacity: 1;
+        }
+
+        .g4 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+            width: var(--circle-size);
+            height: var(--circle-size);
+            top: calc(50% - var(--circle-size) / 2);
+            left: calc(50% - var(--circle-size) / 2);
+            transform-origin: calc(50% - 200px);
+            animation: moveHorizontal 40s ease infinite;
+            opacity: 0.7;
+        }
+
+        .g5 {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+            width: calc(var(--circle-size) * 2);
+            height: calc(var(--circle-size) * 2);
+            top: calc(50% - var(--circle-size));
+            left: calc(50% - var(--circle-size));
+            transform-origin: calc(50% - 800px) calc(50% + 200px);
+            animation: moveInCircle 20s ease infinite;
+            opacity: 1;
+        }
+
+        .interactive {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+            mix-blend-mode: var(--blending);
+            width: 100%;
+            height: 100%;
+            top: -50%;
+            left: -50%;
+            opacity: 0.7;
+        }
+    </style>
+    <script>
+    function adjustFrameSize() {
+        const frame = document.querySelector('.iphone-frame');
+        const wrapper = document.querySelector('.iphone-frame-wrapper');
+        const aspectRatio = 390 / 844;
+
+        const wrapperWidth = wrapper.clientWidth;
+        const wrapperHeight = wrapper.clientHeight;
+
+        const widthBasedHeight = wrapperWidth / aspectRatio;
+        const heightBasedWidth = wrapperHeight * aspectRatio;
+
+        if (widthBasedHeight <= wrapperHeight) {
+            frame.style.width = wrapperWidth + 'px';
+            frame.style.height = widthBasedHeight + 'px';
+        } else {
+            frame.style.width = heightBasedWidth + 'px';
+            frame.style.height = wrapperHeight + 'px';
+        }
+    }
+
+    function showWorkbench() {
+        const text = document.querySelector('.text-container');
+        text.style.display = 'flex';
+        setTimeout(function() {
+            text.style.display = 'none';
+            document.querySelector('.iphone-frame-wrapper').style.opacity = 1;
+        }, 3000); 
+    }
+
+    function redirectToMobile() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
+
+        if (isMobile) {
+            // 手机设备立即跳转
+            window.location.href = "https://rankingoptimization.net/h5.html#/pages/system/login";
+        } else {
+            // 电脑设备延迟3秒跳转
+            setTimeout(function() {
+                window.location.href = "https://rankingoptimization.net";
+            }, 1000); // 延迟3秒跳转
+        }
+    }
+
+    window.addEventListener('resize', adjustFrameSize);
+    window.addEventListener('load', function() {
+        adjustFrameSize();
+        redirectToMobile();  // 手机立即跳转，电脑延迟3秒跳转
+    });
+</script>
+</head>
+<body>
+    <div class="text-container">
+        <div class="loading-circle"></div>
+        Enter the workbench
+    </div>
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+    <div class="iphone-frame-wrapper">
+        <div class="iphone-frame">
+            <iframe class="iphone-screen" src="https://rankingoptimization.net/h5.html#/pages/system/login" scrolling="no"></iframe>
+        </div>
+    </div>
+</body>
+</html>
