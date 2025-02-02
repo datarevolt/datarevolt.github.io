@@ -1,0 +1,162 @@
+/* 通用样式 */
+.content-wrapper {
+    padding: 20px;
+}
+
+/* 表格样式 */
+.table th {
+    background-color: #f4f6f9;
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 0.5rem;
+}
+
+/* 输入框样式 */
+.note-input {
+    min-width: 200px;
+    resize: vertical;
+}
+
+/* 按钮样式 */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* 搜索框样式 */
+#searchUser, #searchOrder {
+    margin-bottom: 1rem;
+}
+
+/* 排序下拉框样式 */
+#sortField {
+    width: auto;
+    display: inline-block;
+}
+
+/* 充值/出款按钮样式 */
+#depositBtn {
+    margin-right: 10px;
+}
+
+/* 图表容器样式 */
+#trendChart {
+    min-height: 400px;
+    width: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .small-box {
+        margin-bottom: 1.5rem;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    .content-wrapper {
+        padding: 10px;
+    }
+}
+
+/* 表格行样式 */
+.table-info {
+    background-color: rgba(23, 162, 184, 0.1);
+}
+
+.table-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* 卡片样式 */
+.card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* 图标样式 */
+.small-box .icon {
+    color: rgba(0,0,0,.15);
+    z-index: 0;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    padding: 1rem 0;
+}
+
+/* 导航栏样式 */
+.navbar {
+    padding: .5rem 1rem;
+}
+
+/* 内容区域标题样式 */
+.content-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0 0 1rem 0;
+}
+
+/* 数据录入表单样式 */
+#orderForm {
+    margin-bottom: 1.5rem;
+}
+
+/* 统计卡片样式 */
+.small-box h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+    padding: 0;
+}
+
+/* 提示信息样式 */
+.alert {
+    margin-bottom: 1rem;
+}
+
+/* 表格内容居中 */
+.table td, .table th {
+    text-align: center;
+}
+
+/* 金额列右对齐 */
+.table td:nth-child(4) {
+    text-align: right;
+}
+
+/* 日期范围筛选样式 */
+.input-group-text {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+}
+
+/* 合计行样式 */
+.font-weight-bold td {
+    background-color: #f8f9fa;
+}
+
+/* 日期输入框样式 */
+input[type="date"] {
+    padding: .375rem .75rem;
+}
+
+/* 导出按钮样式 */
+.btn-success {
+    margin-right: 10px;
+}
+
+/* 备注列宽度 */
+.table td:nth-child(6) {
+    min-width: 220px;
+}
